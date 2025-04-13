@@ -77,28 +77,10 @@ White: #fff
 }
 
 @layer components {
-  /* Gradient border using pseudo-element */
   .border-gradient {
-    position: relative;
     padding: 12px;
     background-color: black;
-    z-index: 1;
-  }
-
-  .border-gradient::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    background-image: linear-gradient(
-      to bottom right,
-      rgb(80, 76, 255),
-      rgb(72, 0, 144)
-    );
-    border-radius: 8px;
-    z-index: -1;
+    border: 1px solid #504CFF;
   }
 
   .active {

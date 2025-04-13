@@ -2,7 +2,7 @@ import Image from "next/image";
 function SocialMedia() {
   return (
     <div className="mx-[40%]">
-      <ul className=" flex flex-row content-center gap-x-6 m-10 mx-0">
+      <ul className=" flex flex-row content-center gap-x-6 mb-10 p-1">
         <li>
           <a href="www.instagram.com">
             <Image

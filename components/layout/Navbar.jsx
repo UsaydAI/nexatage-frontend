@@ -11,8 +11,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative flex flex-col lg:flex-row sm:gap-2 md:gap-3 lg:justify-between content-center mb-[108px] font-normal text-base">
-      <div>
+    <nav className="relative flex flex-col lg:flex-row sm:gap-2 md:gap-3 sticky top-0 z-50 bg-black/60 backdrop-blur-md border-b-1 lg:justify-between content-center mb-[48px] font-normal text-base">
+      <div className="self-center">
         <Image
           src="/images/instagram.svg"
           width={24}
@@ -27,7 +27,7 @@ export default function Navbar() {
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
       <ul
-        className={`flex ${
+        className={`flex self-center ${
           isOpen ? "flex-col gap-x-24" : "hidden"
         } lg:flex lg:flex-row gap-8 px-0 py-3 content-center`}
       >
@@ -52,7 +52,7 @@ export default function Navbar() {
           <Link href="/services">
             <span
               className={
-                pathname === "/services" ? "text-blue-500" : "text-gray-500"
+                pathname === "/services" ? "text-blue-500" : "text-white"
               }
             >
               Services
@@ -85,9 +85,7 @@ export default function Navbar() {
         </li>
       </ul>
       <div className={`${isOpen ? "sm:block" : "sm:hidden"} lg:block`}>
-        <Link href="/contact">
           <Button buttonText="Contact Us" />
-        </Link>
       </div>
     </nav>
   );
